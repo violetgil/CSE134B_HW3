@@ -1,4 +1,5 @@
 # YoloWebDev HW3: README
+Team Members: Gil Olaes, Jason Tan, Max Takano, Alexie Sousa, Sam Marks
 
 This README describes the use of YoloWebDev's HW3 website.
 
