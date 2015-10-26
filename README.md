@@ -17,7 +17,7 @@ The pages in question can be accessed by the following methods:
 
 While looking through the wireframes, we realized that we would need to add a lot more color in order to make the project more visually appealing.  To that end we redesigned the logo around the concept of good (virtues) versus evil (vices), linking them to a blue and red design scheme.  Most of the rest of the website has also been designed with this in mind.
 
-We've also slightly changed the layout of the site to make it more universally responsive to desktops and tablets, as well as mobile devices.  For example, we've added a header and footer to every page in order to make a more tablet and desktop friendly design and then designed them to scale well into a mobile view.  Also, the logo located in the header can also be clicked to navigate the user back to the landing page as a sort of home button to help navigation.  Other than that, we've outlined some page specific changes below.
+We've also slightly changed the layout of the site to make it more universally responsive to desktops and tablets, as well as mobile devices.  For example, we've added a header and footer to every page in order to make a more tablet and desktop friendly design and then designed them to scale well into a mobile view.  Also, the logo located in the header can also be clicked to navigate the user back to the landing page as a sort of home button to help navigation. We left extra space on the right side of the header for account information in the future, and maybe a navigation bar. Other than that, we've outlined some page specific changes below.
 
 ## The Web Pages
 
@@ -27,7 +27,7 @@ The project consists of 3 pages, outlined below:
 
 The landing page includes the redesigned logo, as well as buttons that help the user navigate to both the habit creation and habit viewing pages.  The layout is largely unchanged from the wireframe except for slight spacing changes on the horizontal rules in the middle of the screen.  It's also important to note that the horizontal rule, as well as the buttons, will scale by screen size so that the text and buttons are always readable and on single lines.
 
-Included in the code of the page, but not implemented or shown, is a set of login inputs that are contained in the header that would allow a user to sign into the application.  While the code exists to place them onto the page, problems with responsivity keep us from adding it into this release.
+There is a set of login inputs that are contained in the header that would allow a user to sign into the application. In contracted and mobile views, the login input bars are replaced with just a Login button that when clicked, will pop out a box with the login fields and a sign-in button. Since there is no backend yet, no user information is stored. 
 
 ### Habit Creation Page (addhabit.html)
 
