@@ -1,0 +1,3 @@
+heading {color: black; font-size: 10pt; text-align: left;}
+
+right_button {text-align: right; height: 30px; width: 30px; border-radius: 15px; border-radius:15px;}

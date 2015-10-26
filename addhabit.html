@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width='device-width', initial-scale=1">
+		<title>virtue/vice</title>
+		<link rel="stylesheet" href="addhabit.css" />
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+		<script>
+			function iconCheck(s)
+			{
+				var p = document.querySelectorAll(".iconchecked");
+				for(var i = 0; i< p.length;i++)
+				{
+					p[i].className = "iconcheckbox";
+				}
+				document.getElementById(s).className+=" iconchecked";
+			}
+
+			function dayCheck(s)
+			{
+				var p = document.getElementById(s);
+				if(p.className == "daycheckbox")
+				{
+					p.className += " daychecked";
+				}
+				else
+				{
+					p.className = "daycheckbox";
+				}
+			}
+
+			function timeCheck(s)
+			{
+				var p = document.querySelectorAll(".timechecked");
+				for(var i = 0; i< p.length;i++)
+				{
+					p[i].className = "timecheckbox";
+				}
+				document.getElementById(s).className+=" timechecked";
+			}
+
+			function submitHabit()
+			{
+				//window.location='habit.html';
+				//return false;
+
+				var y = 10000;
+				var titleErr = document.getElementById("title_err");
+				var iconErr = document.getElementById("icon_err");
+				var dayErr = document.getElementById("day_err");
+				var timeErr = document.getElementById("time_err");
+				titleErr.innerHTML = "";
+				iconErr.innerHTML = "";
+				dayErr.innerHTML = "";
+				timeErr.innerHTML = "";
+
+				var time = document.querySelectorAll(".timechecked");
+				if(time.length == 0)
+				{
+					y = document.getElementById("timesection").getBoundingClientRect().top;
+					timeErr.innerHTML = "Select a time frequency.";
+				}
+
+				var day = document.querySelectorAll(".daychecked");
+				if(day.length == 0)
+				{
+					y = document.getElementById("daysection").getBoundingClientRect().top;
+					dayErr.innerHTML = "Select a day frequency.";
+				}
+
+				var icon = document.querySelectorAll(".iconchecked");
+				if(icon.length == 0)
+				{
+					y = document.getElementById("iconsection").getBoundingClientRect().top;
+					iconErr.innerHTML = "Select an icon.";
+				}
+
+				var title = document.getElementById("title");
+				if(title.value == "")
+				{
+					title.focus();
+					y = title.getBoundingClientRect().top;
+					titleErr.innerHTML = "Input a habit title.";
+				}
+
+				if(y != 10000)
+				{
+					window.scroll(0,y);
+					return false;
+				}
+
+				window.location='habit.html';
+				return false;
+			}
+
+		</script>
+	</head>
+	<body>
+		<nav>
+			<div id="welcome">
+				<div id="header-logo">
+					<div style="width:200px; height:26px;" id="header-logo-image" onclick="window.location='landing.html'"></div>
+				</div>
+				<!--<span class="navbar-span">Greetings User.</span>--> 
+			</div>
+		</nav>
+		<div id="container">
+			<main>
+				<form>
+					<h1>Add A Habit <mark id="title_err"></mark></h1>
+					<div>
+						<input id="title" type="text" name="Habit Title"
+						placeholder="Input habit title.">
+					</div>
+					<h2>Select An Icon <mark id="icon_err"></mark></h2>
+					<div id="iconsection">
+						<img id="icon1" class="iconcheckbox" src="Icons/HabitIcons/work.png" alt="Icon" onclick="iconCheck('icon1')">
+						<img id="icon2" class="iconcheckbox" src="Icons/HabitIcons/pet.png" alt="Icon" onclick="iconCheck('icon2')">
+						<img id="icon3" class="iconcheckbox" src="Icons/HabitIcons/no.png" alt="Icon" onclick="iconCheck('icon3')">
+						<img id="icon4" class="iconcheckbox" src="Icons/HabitIcons/sun.png" alt="Icon" onclick="iconCheck('icon4')">
+						<img id="icon5" class="iconcheckbox" src="Icons/HabitIcons/moon.png" alt="Icon" onclick="iconCheck('icon5')">
+						<img id="icon6" class="iconcheckbox" src="Icons/HabitIcons/eat.png" alt="Icon" onclick="iconCheck('icon6')">
+						<img id="icon7" class="iconcheckbox" src="Icons/HabitIcons/exercise.png" alt="Icon" onclick="iconCheck('icon7')">
+						<img id="icon8" class="iconcheckbox" src="Icons/HabitIcons/tech.png" alt="Icon" onclick="iconCheck('icon8')">
+						<img id="icon9" class="iconcheckbox" src="Icons/HabitIcons/meds.png" alt="Icon" onclick="iconCheck('icon9')">
+						<img id="icon10" class="iconcheckbox" src="Icons/HabitIcons/money.png" alt="Icon" onclick="iconCheck('icon10')">
+						<img id="icon11" class="iconcheckbox" src="Icons/HabitIcons/talk.png" alt="Icon" onclick="iconCheck('icon11')">
+					</div>
+					
+					<div>
+						<h2>Frequency <mark id="day_err"></mark></h2>
+						<div id="daysection">
+							<button id="mon" type="button" class="daycheckbox" onclick="dayCheck('mon')" >Mon</button>
+							<button id="tue" type="button" class="daycheckbox" onclick="dayCheck('tue')" >Tue</button>
+							<button id="wed" type="button" class="daycheckbox" onclick="dayCheck('wed')" >Wed</button>
+							<button id="thu" type="button" class="daycheckbox" onclick="dayCheck('thu')" >Thu</button>
+							<button id="fri" type="button" class="daycheckbox" onclick="dayCheck('fri')" >Fri</button>
+							<button id="sat" type="button" class="daycheckbox" onclick="dayCheck('sat')" >Sat</button>
+							<button id="sun" type="button" class="daycheckbox" onclick="dayCheck('sun')" >Sun</button>
+						</div>
+						<h2>Times Per Day <mark id="time_err"></mark></h2>
+						<div id="timesection">
+							<button id="time1" type="button" class="timecheckbox" onclick="timeCheck('time1')" >1</button>
+							<button id="time2" type="button" class="timecheckbox" onclick="timeCheck('time2')" >2</button>
+							<button id="time3" type="button" class="timecheckbox" onclick="timeCheck('time3')" >3</button>
+							<button id="time4" type="button" class="timecheckbox" onclick="timeCheck('time4')" >4</button>
+							<button id="time5" type="button" class="timecheckbox" onclick="timeCheck('time5')" >5</button>
+						</div>
+						
+					</div>
+					<button type="button" id="submitbutton" onclick="submitHabit()">Complete Habit</button>
+				</form>
+			</main>
+		</div>
+		<footer>
+			<p id="foot">&copy;Y0l0vv3bd3V$69 2015</p>
+		</footer>
+	</body>
+</html>

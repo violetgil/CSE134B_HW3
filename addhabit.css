@@ -1,0 +1,218 @@
+
+*:focus {
+	outline: 0;
+}
+
+mark {
+	background: inherit;
+}
+
+#app-title{
+	text-align: center;
+	min-width: 600;
+	font-size: 36pt;
+}
+
+header {
+	background-color: white;
+	margin-bottom: 0px;
+}
+
+h1, h2 {
+	color: #938585;
+}
+
+h1 {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+nav
+{
+	display: table;
+	background: #63dae0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 7%;
+	max-height:40px;
+}
+
+.navbar-span
+{
+	color: white;
+	margin-right:1em;
+}
+
+#welcome
+{
+	display: table;
+	vertical-align: middle;
+	text-align: right;
+	font-family: Raleway;
+	font-color: white;
+	margin-right: 5em;
+	height: 50px;
+}
+
+#header-logo
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#header-logo-image
+{
+	border-left: 10px solid #63DAE0;
+	background-image: url('Icons/Logo_text.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: table-cell;
+	padding: 5px 5px 5px 5px;
+	cursor: pointer;
+}
+
+#title {
+	font-family: Raleway;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	width: 75%;
+	max-width: 550px;
+	height: 40px;
+	font-size: 15pt;
+	border-radius: 8pt;
+	border: rgb(144,206,211) 2pt solid;
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+
+}
+
+#title:focus {
+	border: rgb(114,176,181) 2pt solid;	
+}
+
+body {
+	background-color: #63DAE0;
+	text-align: center;
+	margin: 0 0 0 0;
+	font-family: Raleway;
+}
+
+#container
+{
+	background: #FFFFFF;
+	padding-top: 3%;
+}
+
+@media screen and (max-width:800px) {
+	div#container
+	{
+		background: #FFFFFF;
+		padding-top: 7%;
+	}
+}
+
+main {
+	padding-top: 10px;
+	background-color: white;
+	padding-bottom: 25px;
+}
+
+
+@media screen and (max-width: 1300px)
+{
+	#iconsection, #daysection, #timesection {
+		overflow-x: scroll;
+		white-space: nowrap;
+		height: 150px;
+	}
+}
+
+
+.iconcheckbox {
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	height: 100px; 
+	width: 100px;
+	border: 0.25px white solid;
+	border-radius: 50px;
+	margin-right: 10px;
+	opacity:0.6;
+	cursor: pointer;
+}
+
+.iconcheckbox:first-child{
+	margin-left: 10px;
+}
+
+.daycheckbox, .timecheckbox {
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	display: inline-block;
+	background-color: #ED2626;
+	border: 0.25px white solid;
+	border-radius: 45px;
+	width: 90px;
+	height: 90px;
+	opacity:0.6;
+	color: white;
+	cursor: pointer;
+	font-size: 15pt;
+	margin: 10px 10px 10px 10px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.iconcheckbox:hover, .daycheckbox:hover, .timecheckbox:hover, #submitbutton:hover {
+	opacity: 1;
+	color: white;
+}
+
+.iconchecked, button.daychecked, button.timechecked {
+	opacity: 1;
+	color: white;
+}
+
+#submitbutton {
+	max-width: 350px;
+	width: 75%;
+	height: 50px;
+	font-size: 17pt;
+	color: white;
+	background: none;
+	background-color: #63DAE0;
+	border: 0.25px white solid;
+	border-radius: 8px;
+	outline: 0;
+	text-align: center;
+	margin: 30px 10px 10px 10px;
+	opacity: 0.6;
+	cursor: pointer;
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+}
+
+#foot {
+	font-size: 13pt;
+	color: white;
+}
+
+div {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+p {
+	margin-top: 10px;
+	padding-top: 0;
+	color: red;
+	font-size: 9pt;
+}
+
+mark[id$='err']
+{
+	color: red;
+	font-size: 9pt;
+}

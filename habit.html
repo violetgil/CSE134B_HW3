@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width='device-width', initial-scale=1">
+		<title>virtue/vice</title>
+		<link rel="stylesheet" href="habit.css" />
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet' type='text/css'>
+		<script>
+
+			function deleteHabit(s)
+			{
+				var habitsection = document.querySelectorAll("[data-id='" + s + "'] ");
+				habitsection[0].parentNode.removeChild(habitsection[0]);
+			}
+
+			function showGraph(s)
+			{
+				var graphsection = document.querySelectorAll("[data-id='" + s + "'] .graphsection");
+				var thumbsection = document.querySelectorAll("[data-id='" + s + "'] .thumbsection");
+				graphsection[0].style.display = "inline-block";
+				thumbsection[0].style.display  = "none";
+
+			}
+
+			function showThumb(s)
+			{
+				var graphsection = document.querySelectorAll("[data-id='" + s + "'] .graphsection");
+				var thumbsection = document.querySelectorAll("[data-id='" + s + "'] .thumbsection")
+				graphsection[0].style.display = "none";
+				thumbsection[0].style.display  = "inline-block";
+			}
+
+			function thumbsUp(s)
+			{
+				var graphsection = document.querySelectorAll("[data-id='" + s + "'] .graphsection");
+				var total = parseInt(graphsection[0].getAttribute("data-total"));
+				var statpercentage = document.querySelectorAll(
+					"[data-id='" + s + "'] .graphsection .statpercentage");
+				var thumbsup = parseInt(statpercentage[0].getAttribute("data-up"));
+				var fillmeter = document.querySelectorAll(
+					"[data-id='" + s + "'] .graphsection .fillmeter");
+				thumbsup++;
+				statpercentage[0].setAttribute("data-up", thumbsup);
+				total++;
+				graphsection[0].setAttribute("data-total", total);
+				var ratio = Math.floor((thumbsup/total)*100);
+				fillmeter[0].style.width= ratio + "%";
+				statpercentage[0].innerHTML= ratio+"%";
+				showGraph(s);
+			}
+
+			function thumbsDown(s)
+			{
+				var graphsection = document.querySelectorAll("[data-id='" + s + "'] .graphsection");
+				var total = parseInt(graphsection[0].getAttribute("data-total"));
+				var statpercentage = document.querySelectorAll(
+					"[data-id='" + s + "'] .graphsection .statpercentage");
+				var thumbsup = parseInt(statpercentage[0].getAttribute("data-up"));
+				var fillmeter = document.querySelectorAll(
+					"[data-id='" + s + "'] .graphsection .fillmeter");
+				total++;
+				graphsection[0].setAttribute("data-total", total);
+				var ratio = Math.floor((thumbsup/total)*100);
+				fillmeter[0].style.width= ratio + "%";
+				statpercentage[0].innerHTML= ratio+"%";
+				showGraph(s);
+			}
+
+			function addHabit()
+			{
+				window.location ="addhabit.html";
+				return false;
+			}
+		</script>
+	</head>
+	<body>
+		<nav>
+			<div id="welcome">
+					<div id="header-logo">
+						<div style="width:200px; height:26px;" id="header-logo-image" onclick="window.location='landing.html'"></div>
+					</div>
+					<!--<div class="navbar-span">Greetings User.</div>-->
+			</div>
+		</nav>
+		<div id="container">
+			<main>
+				<template>
+					<div class="habitsection" data-id="1">
+						<h2>Habit 1</h2>
+						<div class="iconsection">
+							<img class="icon" src="Icons/HabitIcons/work.png" alt="Icon">
+						</div>
+						<div class="statsection">
+							<div class="thumbsection">
+								<img class="thumbsup" src="Icons/HabitIcons/thumbsUp.png" alt="Thumbs Up" onclick="thumbsUp('1')">
+								<img class="thumbsdown" src="Icons/HabitIcons/thumbsDownR.png" alt="Thumbs Down"
+								onclick="thumbsDown('1')">
+							</div>
+							<div class="graphsection" data-total="0" onclick="showThumb('1')">
+								<div class="stats">
+									<mark class="statpercentage" data-up="0">0%</mark>
+									<img class="thumbs" src="Icons/HabitIcons/thumbsUp.png" alt="Thumbs">
+								</div>
+								<div class="statmeter">
+									<div class="fillmeter">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="editsection">
+							<img class="editbutton" src="Icons/HabitIcons/edit.png" alt="Edit" onclick="addHabit()">
+							<img class="deletebutton" src="Icons/HabitIcons/trashR.png" alt="Delete" onclick="deleteHabit('1')">
+						</div>
+						<hr>
+					</div>
+				</template>
+				<h1>Habits</h1><br/>
+				<div class="habitsection" data-id="1">
+					<h2>Feed Dog</h2>
+					<div class="iconsection">
+						<img class="icon" src="Icons/HabitIcons/pet.png" alt="Icon">
+					</div>
+					<div class="statsection">
+						<div class="thumbsection">
+							<img class="thumbsup" src="Icons/HabitIcons/thumbsUp.png" alt="Thumbs Up" onclick="thumbsUp('1')">
+							<img class="thumbsdown" src="Icons/HabitIcons/thumbsDownR.png" alt="Thumbs Down"
+							onclick="thumbsDown('1')">
+						</div>
+						<div class="graphsection" data-total="0" onclick="showThumb('1')">
+							<div class="stats">
+								<mark class="statpercentage" data-up="0">0%</mark>
+								<img class="thumbs" src="Icons/HabitIcons/thumbsUp.png" alt="Thumbs">
+							</div>
+							<div class="statmeter">
+								<div class="fillmeter">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="editsection">
+						<img class="editbutton" src="Icons/HabitIcons/edit.png" alt="Edit" onclick="addHabit()">
+						<img class="deletebutton" src="Icons/HabitIcons/trashR.png" alt="Delete" onclick="deleteHabit('1')">
+					</div>
+					<hr>
+				</div>
+				<div class="habitsection" data-id="2">
+					<h2>Complete Homework</h2>
+					<div class="iconsection">
+						<img class="icon" src="Icons/HabitIcons/work.png" alt="Icon">
+					</div>
+					<div class="statsection">
+						<div class="thumbsection">
+							<img class="thumbsup" src="Icons/HabitIcons/thumbsUp.png" alt="Thumbs Up" onclick="thumbsUp('2')">
+							<img class="thumbsdown" src="Icons/HabitIcons/thumbsDownR.png" alt="Thumbs Down"
+							onclick="thumbsDown('2')">
+						</div>
+						<div class="graphsection" data-total="0" onclick="showThumb('2')">
+							<div class="stats">
+								<mark class="statpercentage" data-up="0">0%</mark>
+								<img class="thumbs" src="Icons/HabitIcons/thumbsUp.png" alt="Thumbs">
+							</div>
+							<div class="statmeter">
+								<div class="fillmeter">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="editsection">
+						<img class="editbutton" src="Icons/HabitIcons/edit.png" alt="Edit" onclick="addHabit()">
+						<img class="deletebutton" src="Icons/HabitIcons/trashR.png" alt="Delete" onclick="deleteHabit('2')">
+					</div>
+					<hr>
+				</div>
+				<div class="habitsection" data-id="3">
+					<h2>Sleep 8 Hours</h2>
+					<div class="iconsection">
+						<img class="icon" src="Icons/HabitIcons/moon.png" alt="Icon">
+					</div>
+					<div class="statsection">
+						<div class="thumbsection">
+							<img class="thumbsup" src="Icons/HabitIcons/thumbsUp.png" alt="Thumbs Up" onclick="thumbsUp('3')">
+							<img class="thumbsdown" src="Icons/HabitIcons/thumbsDownR.png" alt="Thumbs Down"
+							onclick="thumbsDown('3')">
+						</div>
+						<div class="graphsection" data-total="0" onclick="showThumb('3')">
+							<div class="stats">
+								<mark class="statpercentage" data-up="0">0%</mark>
+								<img class="thumbs" src="Icons/HabitIcons/thumbsUp.png" alt="Thumbs">
+							</div>
+							<div class="statmeter">
+								<div class="fillmeter">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="editsection">
+						<img class="editbutton" src="Icons/HabitIcons/edit.png" alt="Edit" onclick="addHabit()">
+						<img class="deletebutton" src="Icons/HabitIcons/trashR.png" alt="Delete" onclick="deleteHabit('3')">
+					</div>
+					<hr>
+				</div>			
+			
+			<img id="addbutton" src="Icons/HabitIcons/plus.png" alt="Add" onclick="addHabit()">
+			</main>
+		</div>
+		<footer>
+			<p id="foot">&copy;Y0l0vv3bd3V$69 2015</p>
+		</footer>
+	</body>
+</html>

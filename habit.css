@@ -1,0 +1,284 @@
+
+*:focus {
+	outline: 0;
+}
+
+#app-title{
+	text-align: center;
+	min-width: 600;
+	font-size: 36pt;
+}
+
+mark {
+	background: inherit;
+}
+
+header {
+	background-color: white;
+	margin-bottom: 0px;
+}
+
+h1, h2 {
+	color: #938585;
+}
+
+h1 {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+body {
+	background-color: #63DAE0;
+	text-align: center;
+	margin: 0 0 0 0;
+	font-family: Raleway;
+}
+
+nav
+{
+	display: table;
+	background: #63dae0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 7%;
+	max-height:40px;
+}
+
+#welcome
+{
+	display: table;
+	vertical-align: middle;
+	text-align: right;
+	font-family: Raleway;
+	font-color: white;
+	margin-right: 5em;
+	height: 50px;
+}
+
+#header-logo
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#header-logo-image
+{
+	border-left: 10px solid #63DAE0;
+	background-image: url('Icons/Logo_text.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: table-cell;
+	padding: 5px 5px 5px 5px;
+	cursor: pointer;
+}
+
+.navbar-span
+{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: right;
+	color: white;
+	margin-right:1em;
+}
+
+main {
+	padding-top: 10px;
+	background-color: white;
+	padding-bottom: 25px;
+}
+
+#container
+{
+	background: #FFFFFF;
+	padding-top: 3%;
+}
+
+@media screen and (max-width:800px) {
+	div#container
+	{
+		background: #FFFFFF;
+		padding-top: 7%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.habitsection {
+		overflow-x: scroll;
+		white-space: nowrap;
+		height: 200px;
+	}
+}
+
+
+hr {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	height: 2px;
+	text-align: center;
+	background: #ED2626;
+	border: none;
+	width: 96%;
+	min-width: 600px;
+}
+
+.habitsection > h2 {
+	margin-bottom:  0;
+	padding-bottom: 0;
+}
+
+.iconsection, .statsection, .editsection, .thumbsection, .graphsection, .stats {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.iconsection {
+	margin-left: 10px;
+}
+
+.graphsection {
+	cursor: pointer;
+	display: none;
+}
+
+
+.icon, .thumbsup, .thumbsdown, .editbutton, .deletebutton, #addbutton {
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+	opacity: 1;
+	cursor: pointer;
+	border: 0.25px white solid;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.thumbsup, .thumbsdown, .editbutton, .deletebutton, #addbutton
+{
+	opacity: 0.6;
+}
+
+.thumbsup:hover, .thumbsdown:hover, .editbutton:hover, .deletebutton:hover, #addbutton:hover
+{
+	opacity: 1;
+}
+
+.icon
+{
+	cursor: auto;
+}
+
+.icon {
+	height: 110px; 
+	width: 110px;
+	border-radius: 55px;
+}
+
+.thumbsup, .thumbsdown {
+	height: 90px; 
+	width: 90px;
+	border-radius: 45px;
+}
+
+@media screen and (max-width: 358px)
+{
+	.iconsection{
+		margin-left: 10px;
+	}
+	
+	.icon {
+		height: 100px; 
+		width: 100px;
+		border-radius: 50px;
+	}
+
+	.thumbsup, .thumbsdown {
+		height: 80px; 
+		width: 80px;
+		border-radius: 40px;
+	}
+	
+	.thumbs {
+		height: 50px; 
+		width: 50px;
+		border-radius: 25px;
+		vertical-align: middle;
+	}
+	
+	.editbutton, .deletebutton {
+		height: 58px; 
+		width: 58px;
+		border-radius: 29px;
+	}
+	
+	div.statsection
+	{
+		margin-right:10px;
+		width: 220px;
+	}
+}
+
+.thumbs {
+	height: 56px; 
+	width: 56px;
+	border-radius: 28px;
+	vertical-align: middle;
+}
+
+.editbutton, .deletebutton {
+	height: 65px; 
+	width: 65px;
+	border-radius: 12px;
+}
+
+.statsection {
+	border-right: 2px #63DAE0 solid;
+	width: 250px;
+	padding-right: 10px;
+	margin-left: 0px;
+	margin-right: 15px;
+	text-align: center;
+}
+
+.stats {
+	vertical-align: middle;
+}
+
+.statpercentage {
+	font-family: arial;
+	font-size: 56px;
+	font-weight: lighter;
+	color: #B6B5B5;
+	vertical-align: middle;
+	margin-right: 10px;
+
+}
+
+.statmeter { 
+	margin-top: 10px;
+	width: 200px;
+	height: 15px;
+	border: 0.1px solid white;
+	background-color: #ED2626;
+}
+
+.fillmeter {
+	width: 0%;
+	height: 100%;
+	background-color: #63DAE0;
+}
+
+
+#addbutton {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+}
+
+#foot {
+	font-size: 13pt;
+	color: white;
+}
+
