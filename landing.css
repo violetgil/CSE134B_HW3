@@ -37,29 +37,11 @@ nav {
 
 #header-logo-image
 {
-	border-left: 10px solid #63DAE0;
-	background-image: url('Icons/Logo_text.png');
-	background-repeat: no-repeat;
-	background-size: contain;
 	display: table-cell;
-	padding: 5px 5px 5px 5px;
-	cursor: pointer;
-}
-
-footer
-{
-	background: #63DAE0;
-	width: 100%;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	text-align: center;
-}
-
-#foot
-{
-	font-size: 9pt;
-	color: white;
+	vertical-align: middle;
+	max-height: 3em;
+	padding: 0px;
+	max-width: 70%;
 }
 
 /* Navigation bar */
@@ -69,13 +51,13 @@ footer
 	font-size: 1.3em;
 }
 
-#landing-login-button {
-	/*padding: 0;*/
+.landing-login-button {
 	border: 1px solid white;
 	padding: 5px 5px 5px 5px;
 	border-radius: 3px;
 	background: #63dae0;
 	margin-right: 2em;
+	margin-left: 1em;
 
 	cursor: pointer;
 	color: white;
@@ -90,6 +72,10 @@ footer
 	background: #90CED3;
 }
 
+#landing-login-button:focus {
+	outline: 0;
+}
+
 input[id^='landing'] {
 	margin-right: 1em;
 }
@@ -100,28 +86,105 @@ input[id^='landing'] {
 	text-align: right;
 	font-family: Raleway;
 	margin-right: 5em;
+	visibility: visible;
 }
 
-@media screen and (max-width: 740px)
+.landing-login-form {
+	vertical-align: middle;
+	height: 1.5em;
+}
+
+.dropdown-button {
+
+}
+
+#dropdown {
+	visibility: hidden;
+	position: absolute;
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+.dropdown-button > li {
+    float: left;
+}
+
+.dropdown-button > ul {
+	list-style: none;
+}
+
+.dropdown-button button {
+	border: 1px solid white;
+	padding: 5px 5px 5px 5px;
+	border-radius: 3px;
+	background: #63dae0;
+	margin-right: 2em;
+	margin-left: 1em;
+
+	cursor: pointer;
+	color: white;
+	font-family: Raleway;
+	font-size: 0.7em;
+
+	-webkit-transition: all 0.15s linear;
+	-moz-transition: all 0.15s linear;
+}
+
+.dropdown-button button:hover,
+.dropdown-button button:focus {
+    outline: 0;
+    background: #90CED3;
+}
+
+#login-menu {
+	background-color: #90CED3;
+	position: fixed;
+  	top: 2.1em;
+    left: 1.9em;
+}
+
+.submenu {
+    display: none;
+    border: 1px solid white;
+	border-radius: 3px;
+    padding: 10px;
+}
+.dropdown-button button:focus + .submenu,
+.submenu:hover {
+    display: block;
+}
+
+
+
+@media screen and (max-width: 795px)
 {
 	/* Login starts stacking */
+	#dropdown {
+		visibility: visible;
+		position: relative;
+	    margin-top: 0;
+	    margin-left: 0;
+	    display: table-cell;
+		vertical-align: middle;
+		padding:0;
+	}
+	#landing-login {
+		visibility: hidden;
+		position: absolute;
+	    margin-top: -100px;
+	    margin-left: -100px;
+	}
 }
 
 #document {
 	padding-top: 20vh;
-	/*margin-top: 10em;*/
 }
 
 
 #app-title {
 	display: table-cell;
-	/*height: 1%;*/
-	/*width: 30%;*/
-	/*width: 70vh;*/
 	max-width: 90%;
 	height: 17vh;
-	/*min-width: 200px;*/
-	/*min-width: 550px;*/
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -192,8 +255,7 @@ input[id^='landing'] {
 }
 
 #landing-button-pane {
-	/*margin-left: auto;
-	margin-right: auto;*/
+	
 }
 
 .button {
@@ -211,19 +273,25 @@ input[id^='landing'] {
 #add-button {
 	/* Spacing to the right of the add button */
 	margin-right: 1em;
-	
 	-webkit-transition: all 0.15s linear;
 	-moz-transition: all 0.15s linear;
 }
 
 
-
-
-/*@media screen and (max-width: 1000px)
+footer
 {
-	#landing-button-pane
-	{
-		margin-top: 15%;
-	}
-}*/
+	background: #63DAE0;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+#foot
+{
+	font-size: 9pt;
+	color: white;
+}
+
 
