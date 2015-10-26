@@ -39,6 +39,6 @@ Note that, since we haven't created a back-end for the application yet, none of 
 
 The habit viewing page is also very similar to the wireframe.  Clicking on either the thumbs up and thumbs down will cause both buttons to disappear and be replaced by a percentage and meter showing the ratio between thumbs up presses and thumbs down presses.  Pressing the meter will cause it to disappear and revert to showing the thumbs up and thumbs down buttons.  The edit and delete buttons, which are always visible in the desktop and tablet versions but require a swipe to view in the mobile version, perform approximately the functions they are supposed to.  The edit button will take the user to the habit creation page (although the lack of a back-end prevents us from pre-populating the page with information), and the delete button will remove the row from the page.
 
-In terms of changes, we've centered the name of each habit in order to make it more visible and pronounced and made it so that you can reset the thumbs up and thumbs down buttons by pressing on the meter.
+In terms of changes, we've centered the name of each habit and its frequency in order to make it more visible and pronounced and made it so that you can reset the thumbs up and thumbs down buttons by pressing on the meter.
 
 For right now, the page has been pre-populated with dummy rows in order to get a feel for what the page will look like on completion.
